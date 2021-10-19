@@ -7,7 +7,9 @@ BOTTOM = 50
 class Ball():
     def __init__(self):
         self.image = load_image('ball41x41.png')
+        self.image2 = load_image('ball21x21.png')
         self.x = random.randint(0, 800)
+        self.x2 = random.randint(0, 800)
         self.y = 599
         self.v = random.randint(5, 15)
 
@@ -18,6 +20,7 @@ class Ball():
 
     def draw(self):
         self.image.draw(self.x, self.y)
+        self.image2.draw(self.x2, self.y)
 
 class Grass:
     def __init__(self):
@@ -43,7 +46,7 @@ grass = Grass()
 running = True
 
 
-balls = [Ball() for i in range(20)]
+balls = [Ball() for i in range(10)]
 # game main loop code
 while running:
     handle_events()
